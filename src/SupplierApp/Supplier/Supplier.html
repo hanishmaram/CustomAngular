@@ -1,0 +1,26 @@
+<form [formGroup]="supplierObj.formGroup">
+Supplier Name:- <input [(ngModel)]="supplierObj.SupplierName" formControlName="SupplierNameControl" type="text">
+<div *ngIf="supplierObj.formGroup.controls['SupplierNameControl'].dirty" [hidden]="!(supplierObj.formGroup.controls['SupplierNameControl'].hasError('required'))">Supplier Name is required.</div>
+<br>
+Supplier Code:- <input [(ngModel)]="supplierObj.SupplierCode" formControlName="SupplierCodeControl" type="text">
+<div *ngIf="supplierObj.formGroup.controls['SupplierCodeControl'].dirty" [hidden]="!(supplierObj.formGroup.controls['SupplierCodeControl'].hasError('required'))">Supplier Code is required.</div>
+<div *ngIf="supplierObj.formGroup.controls['SupplierCodeControl'].dirty" [hidden]="!(supplierObj.formGroup.controls['SupplierCodeControl'].hasError('pattern'))">Supplier Code is pattern.</div>
+<br>
+Supplier Amount:- <input [(ngModel)]="supplierObj.SupplierAmount" [ngModelOptions]="{standalone: true}" type="text"><br>
+{{supplierObj.SupplierName}}<br>
+{{supplierObj.SupplierCode}}<br>
+{{supplierObj.SupplierAmount}}<br>
+<input [disabled]="!supplierObj.formGroup.valid" (click)="Add()" type="button" value="Add"><br>
+</form>
+<table>
+  <tr>
+    <td>Supplier Code</td>
+    <td>Supplier Name</td>
+    <td>Supplier Amount</td>
+  </tr>
+  <tr *ngFor="let supplier of supplierArr">
+    <td>{{supplier.SupplierCode}}</td>
+    <td>{{supplier.SupplierName}}</td>
+    <td>{{supplier.SupplierAmount}}</td>
+  </tr>
+</table>
