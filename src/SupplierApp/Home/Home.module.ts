@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule} from '@angular/router';
 import { HomeAboutComponent } from './Home.About.component';
 import {MainRoutes} from '../Routing/RoutingModule.MainRoutes';
+import {Logger,ConsoleLogger,FileLogger} from '../Utility/Utility.Logger';
+
 
 
 
@@ -15,7 +17,13 @@ import {MainRoutes} from '../Routing/RoutingModule.MainRoutes';
     BrowserModule,
     RouterModule.forRoot(MainRoutes)
   ],
-  providers:[],
+  providers:[
+    
+    {
+      provide:Logger,
+      useClass:ConsoleLogger
+    }
+  ],
   bootstrap:[HomeMasterPageComponent]
 })
 export class HomeModule{

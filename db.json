@@ -1,0 +1,40 @@
+{
+  "Suppliers": [
+    {
+      "id": 1,
+      "SupplierName": "Hanish",
+      "SupplierCode": "A1009",
+      "SupplierAmount": "100.23"
+    },
+    {
+      "id": 2,
+      "SupplierName": "Mara,",
+      "SupplierCode": "A1008",
+      "SupplierAmount": "99.23"
+    },
+    {
+      "id": 10,
+      "SupplierCode": "",
+      "SupplierName": "",
+      "SupplierAmount": 0
+    },
+    {
+      "id": "20010",
+      "SupplierCode": "A10001",
+      "SupplierName": "Hanish",
+      "SupplierAmount": "200"
+    },
+    {
+      "id": "50010",
+      "SupplierCode": "A1002",
+      "SupplierName": "Hanish",
+      "SupplierAmount": "500"
+    },
+    {
+      "id": "60010",
+      "SupplierCode": "A2345",
+      "SupplierName": "Hanish",
+      "SupplierAmount": "600"
+    }
+  ]
+}

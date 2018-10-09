@@ -4,6 +4,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { SupplierComponent } from './Supplier.component';
 import { RouterModule } from '@angular/router';
 import { SupplierRoutes } from '../Routing/RoutingModule.SupplierRoutes';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SupplierRoutes } from '../Routing/RoutingModule.SupplierRoutes';
     CommonModule,
     FormsModule,
     RouterModule.forChild(SupplierRoutes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [SupplierComponent]

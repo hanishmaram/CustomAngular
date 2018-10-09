@@ -11,6 +11,7 @@ Supplier Amount:- <input [(ngModel)]="supplierObj.SupplierAmount" [ngModelOption
 {{supplierObj.SupplierCode}}<br>
 {{supplierObj.SupplierAmount}}<br>
 <input [disabled]="!supplierObj.formGroup.valid" (click)="Add()" type="button" value="Add"><br>
+<input  (click)="PostToServer()" type="button" [disabled]="!supplierObj.formGroup.valid" value="PostToServer"><br>
 </form>
 <table>
   <tr>
