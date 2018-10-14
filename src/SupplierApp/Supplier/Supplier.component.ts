@@ -18,6 +18,10 @@ export class SupplierComponent {
     this.supplierObj=new Supplier();
   }
 
+  SelectSupplier(selected:Supplier){
+    this.supplierObj=selected;
+  }
+
   PostToServer(){
     let supplierDto:any={};
     //Hack

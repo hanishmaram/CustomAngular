@@ -1,8 +1,9 @@
 import {NgForm,FormGroup,FormControl,Validators,FormBuilder} from '@angular/forms';
 export class Supplier{
   formGroup:FormGroup=null;
+  
   constructor(){
-    let _builder=new FormBuilder();
+    let _builder=new FormBuilder();  
     this.formGroup=_builder.group({});
 
     this.formGroup.addControl('SupplierNameControl',new FormControl('',Validators.required));
